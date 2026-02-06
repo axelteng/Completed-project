@@ -100,9 +100,10 @@ huart2 -> RS_485.h
 	B       to    B
 
 思路：
-    当CAN有数据就进入中断(Highest)，将数据存储到列队里，然后退出中断，在Free RTOS里CANTask(High)里运行计算并打包成485数组，在Free RTOS里RS485Task(Normal)发送数据及CRC校验(Special table for lookup method).在Free RTOS里TestTask(Low)里可打印测试
+    当CAN有数据就进入中断(Highest)，将数据存储到队列里，然后退出中断，在Free RTOS里CANTask(High)里运行计算并打包成485数组，在Free RTOS里RS485Task(Normal)发送数据及CRC校验(Special table for lookup method).在Free RTOS里TestTask(Low)里可打印测试
 
     这种结构确保了实时响应能力、清晰的职责划分以及 CAN 网络与 RS-485 网络之间的可靠通信。
+
 
 
 
