@@ -4,3 +4,5 @@
 
   # stm32f103c8t6_can_rs485    
     Receive encoder data via CAN interrupt and store it in a queue. Compute the angles, generate an RS485 message array with CRC checksum, and transmit the data over RS485.
+    
+My email address：axel.teng@outlook.com
