@@ -12,8 +12,9 @@
   # 3-FreeRTOS_Mutex    (HAL)
     Developed a multi-task real-time data acquisition and display system based on STM32 and FreeRTOS. The system continuously samples telemetry data via ADC and leverages FreeRTOS mutexes to ensure thread-safe access to display data and state flags. It transmits data over the RS-485 bus at a fixed 10ms interval, while simultaneously rendering real-time decimal and hexadecimal formats on an OLED display.
     基于 STM32 + FreeRTOS 的多任务实时数据采集与显示系统。系统通过 ADC 实时采集遥感数据，利用 FreeRTOS 互斥锁机制保障显示数据与状态标志的线程安全，并以 10ms 的固定周期通过 RS-485 总线向外发送数据，同时在 OLED 屏幕上实时刷新数据的十进制与十六进制格式。
-
-
+  # PWMControlServo   (HAL)
+    Developed a servo PWM control system on STM32. Generates a fixed 50Hz PWM signal and dynamically adjusts the pulse width (500 or 1500) based on real-time PA1 GPIO state. The architecture supports servo positioning and is extensible to BLDC and DC motor speed regulation.
+    基于 STM32 开发舵机 PWM 控制系统。生成固定 50Hz PWM 信号，并根据 PA1 的实时 GPIO 状态动态调整脉宽（500 或 1500）。该架构支持舵机角度定位，并可扩展用于无刷电机（BLDC）及直流电机的转速调节。
 
   
 My email address：axel.teng@outlook.com
