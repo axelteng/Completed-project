@@ -8,7 +8,12 @@
     通过 CAN 中断接收编码器数据并存储至队列。计算角度值，生成包含 CRC 校验的 RS-485 消息数组，并通过 RS-485 接口发送数据。
   # HAL_CANRx485out1.3    (HAL)
     Developed a bare-metal embedded data acquisition and forwarding system based on STM32 microcontrollers. It collects position/velocity data from multiple encoders and gyroscope telemetry via the CAN bus, alongside button status and ADC-based remote control inputs. The data is encapsulated into custom frames with CRC checksums and transmitted over the RS-485 bus, while simultaneously outputting debug information via a dedicated USART2 interface. (Implemented without FreeRTOS)
-  基于 STM32 微控制器的嵌入式数据采集与转发系统。它通过 CAN 总线从多个编码器采集位置/速度数据和陀螺仪数据，同时读取按键状态和遥控器(ADC)数据，经过帧封装和 CRC 校验后，通过 RS-485 总线对外发送，同时通过 USART2 串口输出调试信息。(没有 FreeRTOS)
+    基于 STM32 微控制器的嵌入式数据采集与转发系统。它通过 CAN 总线从多个编码器采集位置/速度数据和陀螺仪数据，同时读取按键状态和遥控器(ADC)数据，经过帧封装和 CRC 校验后，通过 RS-485 总线对外发送，同时通过 USART2 串口输出调试信息。(没有 FreeRTOS)
+  # 3-FreeRTOS_Mutex    (HAL)
+    Developed a multi-task real-time data acquisition and display system based on STM32 and FreeRTOS. The system continuously samples telemetry data via ADC and leverages FreeRTOS mutexes to ensure thread-safe access to display data and state flags. It transmits data over the RS-485 bus at a fixed 10ms interval, while simultaneously rendering real-time decimal and hexadecimal formats on an OLED display.
+    基于 STM32 + FreeRTOS 的多任务实时数据采集与显示系统。系统通过 ADC 实时采集遥感数据，利用 FreeRTOS 互斥锁机制保障显示数据与状态标志的线程安全，并以 10ms 的固定周期通过 RS-485 总线向外发送数据，同时在 OLED 屏幕上实时刷新数据的十进制与十六进制格式。
+
+
 
   
 My email address：axel.teng@outlook.com
