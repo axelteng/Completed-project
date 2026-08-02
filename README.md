@@ -6,5 +6,9 @@
   # stm32f103c8t6_can_rs485    (HAL)
     Receive encoder data via CAN interrupt and store it in a queue. Compute the angles, generate an RS485 message array with CRC checksum, and transmit the data over RS485.
     通过 CAN 中断接收编码器数据并存储至队列。计算角度值，生成包含 CRC 校验的 RS-485 消息数组，并通过 RS-485 接口发送数据。
-    
+  # HAL_CANRx485out1.3    (HAL)
+    Developed a bare-metal embedded data acquisition and forwarding system based on STM32 microcontrollers. It collects position/velocity data from multiple encoders and gyroscope telemetry via the CAN bus, alongside button status and ADC-based remote control inputs. The data is encapsulated into custom frames with CRC checksums and transmitted over the RS-485 bus, while simultaneously outputting debug information via a dedicated USART2 interface. (Implemented without FreeRTOS)
+  基于 STM32 微控制器的嵌入式数据采集与转发系统。它通过 CAN 总线从多个编码器采集位置/速度数据和陀螺仪数据，同时读取按键状态和遥控器(ADC)数据，经过帧封装和 CRC 校验后，通过 RS-485 总线对外发送，同时通过 USART2 串口输出调试信息。(没有 FreeRTOS)
+
+  
 My email address：axel.teng@outlook.com
